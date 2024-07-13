@@ -12,4 +12,8 @@ export const logout = async (req, res) => {
       res.json({
             data: "You hit logout endpoint",
       });
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6ac79c57f2d3e774cdb5b23b792ab79bf9ff282c
