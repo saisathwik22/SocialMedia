@@ -13,12 +13,12 @@ export const signup = async (req, res) => {
 
     const existingUser = await User.findOne({ username });
     if (existingUser) {
-      return res.status(400).json({ error: "Username is already taken " });
+      return res.status(400).json({ error: "Username is already taken" });
     }
 
     const existingEmail = await User.findOne({ email });
     if (existingEmail) {
-      return res.status(400).json({ error: "Email is already taken " });
+      return res.status(400).json({ error: "Email is already taken" });
     }
 
     // Hash password - bcryptjs
