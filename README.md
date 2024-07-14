@@ -6,6 +6,7 @@
 - ### MERN Stack
 - Postman
 - Visual Studio Code
+- Cloudinary
 - Render
 
 ## Project Outline
