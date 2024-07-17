@@ -1,4 +1,4 @@
-# Twitter Fullstack Clone
+# Social Media Application
 
 ## Technologies Used:
 
