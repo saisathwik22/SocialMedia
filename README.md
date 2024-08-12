@@ -1,9 +1,9 @@
-# Social Media Application
+# Social Media Application - MERN Stack
 
 ## Technologies Used:
 
-- HTML and CSS
-- ### MERN Stack
+- MERN : MongoDB, ExpressJS, ReactJS, NodeJS
+- TailwindCSS
 - Postman
 - Visual Studio Code
 - Cloudinary
