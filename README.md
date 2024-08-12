@@ -1,6 +1,6 @@
 # Social Media Application - MERN Stack
 
-## Technologies Used:
+## Technologies and Frameworks Used:
 
 - MERN : MongoDB, ExpressJS, ReactJS, NodeJS
 - TailwindCSS
@@ -8,6 +8,8 @@
 - Visual Studio Code
 - Cloudinary
 - Render
+- DaisyUI
+- ReactIcons
 
 ## Project Outline
 
@@ -21,6 +23,8 @@
 
 - Hard Coded Data
 - React Router DOM
+- React Icons
+- DaisyUI
 
 ### 3. Connect (React.js & React Query)
 
