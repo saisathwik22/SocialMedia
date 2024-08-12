@@ -82,7 +82,7 @@ const Post = ({ post }) => {
               </div>
               {/* We are using modal component from DaisyUI */}
               <dialog
-                id={`comments_modal${post_.id}`}
+                id={`comments_modal${post._id}`}
                 className='modal border-none outline-none'
               >
                 <div className='modal-box rounded border border-gray-600'>
