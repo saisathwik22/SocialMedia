@@ -1,4 +1,4 @@
-# Social Media Application
+# Social Media Application -
 
 ## Technologies Used:
 
