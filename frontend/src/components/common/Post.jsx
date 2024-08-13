@@ -1,7 +1,7 @@
 import { FaRegComment } from "react-icons/fa";
 import { BiRepost } from "react-icons/bi";
 import { FaRegHeart } from "react-icons/fa";
-import { FaRegBookmark } from "react-icons/fa";
+import { FaRegBookmark } from "react-icons/fa6";
 import { FaTrash } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -12,7 +12,9 @@ const Post = ({ post }) => {
   const isLiked = false;
 
   const isMyPost = true;
+
   const formattedDate = "1h";
+
   const isCommenting = false;
 
   const handleDeletePost = () => {};
@@ -43,7 +45,7 @@ const Post = ({ post }) => {
               <Link to={`/profile/${postOwner.username}`}>
                 @{postOwner.username}
               </Link>
-              <span>.</span>
+              <span>·</span>
               <span>{formattedDate}</span>
             </span>
             {isMyPost && (
@@ -75,12 +77,12 @@ const Post = ({ post }) => {
                     .showModal()
                 }
               >
-                <FaRegComment className='w-4 h-4 text-slate-500 group-hover:text-sky-400' />
+                <FaRegComment className='w-4 h-4  text-slate-500 group-hover:text-sky-400' />
                 <span className='text-sm text-slate-500 group-hover:text-sky-400'>
                   {post.comments.length}
                 </span>
               </div>
-              {/* We are using modal component from DaisyUI */}
+              {/* We're using Modal Component from DaisyUI */}
               <dialog
                 id={`comments_modal${post._id}`}
                 className='modal border-none outline-none'
@@ -90,7 +92,7 @@ const Post = ({ post }) => {
                   <div className='flex flex-col gap-3 max-h-60 overflow-auto'>
                     {post.comments.length === 0 && (
                       <p className='text-sm text-slate-500'>
-                        No comments yet, be the first one!
+                        No comments yet 🤔 Be the first one 😉
                       </p>
                     )}
                     {post.comments.map((comment) => (
@@ -124,7 +126,7 @@ const Post = ({ post }) => {
                     onSubmit={handlePostComment}
                   >
                     <textarea
-                      className='textarea w-full p-1 rounded text-md resize-none border focus:outline-none border-gray-800'
+                      className='textarea w-full p-1 rounded text-md resize-none border focus:outline-none  border-gray-800'
                       placeholder='Add a comment...'
                       value={comment}
                       onChange={(e) => setComment(e.target.value)}
@@ -143,7 +145,7 @@ const Post = ({ post }) => {
                 </form>
               </dialog>
               <div className='flex gap-1 items-center group cursor-pointer'>
-                <BiRepost className='w-6 h-6 text-slate-500 group-hover:text-green-500' />
+                <BiRepost className='w-6 h-6  text-slate-500 group-hover:text-green-500' />
                 <span className='text-sm text-slate-500 group-hover:text-green-500'>
                   0
                 </span>
@@ -156,8 +158,9 @@ const Post = ({ post }) => {
                   <FaRegHeart className='w-4 h-4 cursor-pointer text-slate-500 group-hover:text-pink-500' />
                 )}
                 {isLiked && (
-                  <FaRegHeart className='w-4 h-4 cursor-pointer text-pink-500' />
+                  <FaRegHeart className='w-4 h-4 cursor-pointer text-pink-500 ' />
                 )}
+
                 <span
                   className={`text-sm text-slate-500 group-hover:text-pink-500 ${
                     isLiked ? "text-pink-500" : ""

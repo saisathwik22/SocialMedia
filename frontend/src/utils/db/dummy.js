@@ -4,9 +4,9 @@ export const POSTS = [
     text: "Let's dive into NEXT.JS and build creative applications",
     img: "/posts/post1.png",
     user: {
-      username: "sathwik22",
+      username: "sathwik28",
       profileImg: "/avatars/boy1.png",
-      fullName: "Sai Sathwik",
+      fullName: "Sai Sathwik Reddy",
     },
     comments: [
       {
