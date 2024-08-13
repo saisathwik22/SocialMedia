@@ -7,7 +7,7 @@ import EditProfileModal from "./EditProfileModal";
 
 import { POSTS } from "../../utils/db/dummy";
 
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa6";
 import { IoCalendarOutline } from "react-icons/io5";
 import { FaLink } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
@@ -29,8 +29,8 @@ const ProfilePage = () => {
     username: "sathwik22",
     profileImg: "/avatars/boy2.png",
     coverImg: "/cover.png",
-    bio: "Software Enthusiast, passionate for MERN stack development.",
-    link: "https://github.com/saisathwik22",
+    bio: "Software Enthusiast, MERN developer.",
+    link: "https://youtube.com/@asaprogrammer_",
     following: ["1", "2", "3"],
     followers: ["1", "2", "3"],
   };
@@ -46,9 +46,10 @@ const ProfilePage = () => {
       reader.readAsDataURL(file);
     }
   };
+
   return (
     <>
-      <div className='flex-[4_4_0] border-r border-gray-700 min-h-screen'>
+      <div className='flex-[4_4_0]  border-r border-gray-700 min-h-screen '>
         {/* HEADER */}
         {isLoading && <ProfileHeaderSkeleton />}
         {!isLoading && !user && (
@@ -83,6 +84,7 @@ const ProfilePage = () => {
                     <MdEdit className='w-5 h-5 text-white' />
                   </div>
                 )}
+
                 <input
                   type='file'
                   hidden
@@ -96,7 +98,7 @@ const ProfilePage = () => {
                   onChange={(e) => handleImgChange(e, "profileImg")}
                 />
                 {/* USER AVATAR */}
-                <div className='avatar absolute -botton-16 left-4'>
+                <div className='avatar absolute -bottom-16 left-4'>
                   <div className='w-32 rounded-full relative group/avatar'>
                     <img
                       src={
@@ -135,6 +137,7 @@ const ProfilePage = () => {
                   </button>
                 )}
               </div>
+
               <div className='flex flex-col gap-4 mt-14 px-4'>
                 <div className='flex flex-col'>
                   <span className='font-bold text-lg'>{user?.fullName}</span>
@@ -143,18 +146,19 @@ const ProfilePage = () => {
                   </span>
                   <span className='text-sm my-1'>{user?.bio}</span>
                 </div>
+
                 <div className='flex gap-2 flex-wrap'>
                   {user?.link && (
-                    <div className='flex gap-1 items-center'>
+                    <div className='flex gap-1 items-center '>
                       <>
                         <FaLink className='w-3 h-3 text-slate-500' />
                         <a
-                          href='https://github.com/saisathwik22'
+                          href='https://youtube.com/@asaprogrammer_'
                           target='_blank'
                           rel='noreferrer'
                           className='text-sm text-blue-500 hover:underline'
                         >
-                          github.com/saisathwik22
+                          youtube.com/@asaprogrammer_
                         </a>
                       </>
                     </div>
@@ -162,7 +166,7 @@ const ProfilePage = () => {
                   <div className='flex gap-2 items-center'>
                     <IoCalendarOutline className='w-4 h-4 text-slate-500' />
                     <span className='text-sm text-slate-500'>
-                      Joined August 2021
+                      Joined July 2021
                     </span>
                   </div>
                 </div>
@@ -173,7 +177,7 @@ const ProfilePage = () => {
                     </span>
                     <span className='text-slate-500 text-xs'>Following</span>
                   </div>
-                  <div className='fle gap-1 items-center'>
+                  <div className='flex gap-1 items-center'>
                     <span className='font-bold text-xs'>
                       {user?.followers.length}
                     </span>
@@ -197,17 +201,17 @@ const ProfilePage = () => {
                 >
                   Likes
                   {feedType === "likes" && (
-                    <div className='absolute bottom-0 w-10 h-1 rounded-full bg-primary' />
+                    <div className='absolute bottom-0 w-10  h-1 rounded-full bg-primary' />
                   )}
                 </div>
               </div>
             </>
           )}
+
           <Posts />
         </div>
       </div>
     </>
   );
 };
-
 export default ProfilePage;
