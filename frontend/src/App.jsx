@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-
+import LoadingSpinner from "./components/common/LoadingSpinner";
 import HomePage from "./pages/home/HomePage";
 import LoginPage from "./pages/auth/login/LoginPage";
 import SignUpPage from "./pages/auth/signup/SignUpPage";
@@ -36,7 +36,7 @@ function App() {
   if (isLoading) {
     return (
       <div className='h-screen flex justify-center items-center'>
-        {/* <LoadingSpinner size='lg' /> */}
+        <LoadingSpinner size='lg' />
       </div>
     );
   }
