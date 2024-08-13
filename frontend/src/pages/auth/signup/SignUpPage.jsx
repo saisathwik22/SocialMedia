@@ -7,7 +7,6 @@ import { MdOutlineMail } from "react-icons/md";
 import { FaUser } from "react-icons/fa";
 import { MdPassword } from "react-icons/md";
 import { MdDriveFileRenameOutline } from "react-icons/md";
-
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import toast from "react-hot-toast";
 
@@ -34,7 +33,6 @@ const SignUpPage = () => {
 
         const data = await res.json();
         if (!res.ok) throw new Error(data.error || "Failed to create account");
-
         console.log(data);
         return data;
       } catch (error) {
@@ -44,14 +42,16 @@ const SignUpPage = () => {
     },
     onSuccess: () => {
       toast.success("Account created successfully");
+
       {
-        queryClient.invalidateQueries({ queryKey: ["authUser"] });
+        /* Added this line below, after recording the video. I forgot to add this while recording, sorry, thx. */
       }
+      queryClient.invalidateQueries({ queryKey: ["authUser"] });
     },
   });
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // Page won't reload
+    e.preventDefault(); // page won't reload
     mutate(formData);
   };
 
@@ -61,12 +61,12 @@ const SignUpPage = () => {
 
   return (
     <div className='max-w-screen-xl mx-auto flex h-screen px-10'>
-      <div className='flex-1 hidden lg:flex items-center justify-center'>
-        <XSvg className=' lg:w-2/3 fill-white' />
+      <div className='flex-1 hidden lg:flex items-center  justify-center'>
+        <XSvg className='lg:w-2/3 fill-white' />
       </div>
       <div className='flex-1 flex flex-col justify-center items-center'>
         <form
-          className='lg:w-2/3 mx-auto md:mx-20 flex gap-4 flex-col'
+          className='lg:w-2/3  mx-auto md:mx-20 flex gap-4 flex-col'
           onSubmit={handleSubmit}
         >
           <XSvg className='w-24 lg:hidden fill-white' />
@@ -87,7 +87,7 @@ const SignUpPage = () => {
               <FaUser />
               <input
                 type='text'
-                className='grow'
+                className='grow '
                 placeholder='Username'
                 name='username'
                 onChange={handleInputChange}
@@ -126,7 +126,7 @@ const SignUpPage = () => {
           <p className='text-white text-lg'>Already have an account?</p>
           <Link to='/login'>
             <button className='btn rounded-full btn-primary text-white btn-outline w-full'>
-              Sign In
+              Sign in
             </button>
           </Link>
         </div>
@@ -134,5 +134,4 @@ const SignUpPage = () => {
     </div>
   );
 };
-
 export default SignUpPage;
