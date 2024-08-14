@@ -15,6 +15,7 @@ const LoginPage = () => {
     username: "",
     password: "",
   });
+
   const queryClient = useQueryClient();
 
   const {
@@ -43,8 +44,7 @@ const LoginPage = () => {
       }
     },
     onSuccess: () => {
-      // refetch the authUser
-      toast.success("Successfully Logged in");
+      toast.success("Login successful");
       queryClient.invalidateQueries({ queryKey: ["authUser"] });
     },
   });

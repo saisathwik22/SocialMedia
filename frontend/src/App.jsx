@@ -14,7 +14,7 @@ import { useQuery } from "@tanstack/react-query";
 
 function App() {
   const { data: authUser, isLoading } = useQuery({
-    // we use queryKey to give a unique name to our query and refer to it later
+    // use query key, to give unique name to our query and refer it later...!
     queryKey: ["authUser"],
     queryFn: async () => {
       try {
@@ -24,7 +24,8 @@ function App() {
         if (!res.ok) {
           throw new Error(data.error || "Something went wrong");
         }
-        console.log("authUser is here:", data);
+        console.log("authUser is here ", data);
+
         return data;
       } catch (error) {
         throw new Error(error);
@@ -35,8 +36,8 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className='h-screen flex justify-center items-center'>
-        <LoadingSpinner size='lg' />
+      <div className='h-screen flex justify-center'>
+        <LoadingSpinner />
       </div>
     );
   }
