@@ -31,7 +31,7 @@ const ProfilePage = () => {
     profileImg: "/avatars/boy2.png",
     coverImg: "/cover.png",
     bio: "Software Enthusiast, MERN developer.",
-    link: "https://youtube.com/@asaprogrammer_",
+    link: "https://github.com/saisathwik22",
     following: ["1", "2", "3"],
     followers: ["1", "2", "3"],
   };
@@ -156,7 +156,7 @@ const ProfilePage = () => {
                       <>
                         <FaLink className='w-3 h-3 text-slate-500' />
                         <a
-                          href='https://youtube.com/@asaprogrammer_'
+                          href='https://github.com/saisathwik22'
                           target='_blank'
                           rel='noreferrer'
                           className='text-sm text-blue-500 hover:underline'
