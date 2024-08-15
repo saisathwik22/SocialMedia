@@ -1,3 +1,5 @@
+// ChatGPT generated code snippet.
+
 export const formatPostDate = (createdAt) => {
   const currentDate = new Date();
   const createdAtDate = new Date(createdAt);
