@@ -1,5 +1,8 @@
 # Social Media Application - MERN Stack
 
+username - admin
+password - 123456
+
 - [Live URL](https://socialmedia-ygl3.onrender.com/)
 
   ![Screenshot (58)](https://github.com/user-attachments/assets/b6779e36-10e2-4255-b03e-ac3d5920d369)
