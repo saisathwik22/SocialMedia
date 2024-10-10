@@ -1,20 +1,19 @@
 # Social Media Application - MERN Stack
 
-username - admin
-password - 123456
 
-- [Live URL](https://socialmedia-ygl3.onrender.com/)
-
-  ![Screenshot (58)](https://github.com/user-attachments/assets/b6779e36-10e2-4255-b03e-ac3d5920d369)
+- [Deployed on Render](https://socialmedia-ygl3.onrender.com/)
 
   ![Screenshot (57)](https://github.com/user-attachments/assets/fa0b3f96-66c0-49f6-906e-25015b0a1c47)
 
+Sample Credentials
+- username: admin
+- password: 123456
 
 ## Technologies and Frameworks Used:
 
 - MERN : MongoDB, ExpressJS, ReactJS, NodeJS
 - TailwindCSS
-- Postman
+- Postman API
 - Visual Studio Code
 - Cloudinary
 - Render
