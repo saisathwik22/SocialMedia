@@ -54,3 +54,9 @@ frontend > npm create vite@latest
 npm i -D nodemon
 
 ```
+
+![Screenshot (58)](https://github.com/user-attachments/assets/502ee662-2bc4-47c9-a978-3a18b2ecbd8f)
+
+![Screenshot (56)](https://github.com/user-attachments/assets/6b417ad8-de4c-44d5-9758-1d0a14a4ae2c)
+
+
