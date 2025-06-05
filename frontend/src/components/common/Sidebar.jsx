@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import { BiLogOut } from "react-icons/bi";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
-
 import { toast } from "react-hot-toast";
 // import { useState } from "react";
 
@@ -42,9 +41,7 @@ const Sidebar = () => {
   return (
     <div className='md:flex-[2_2_0] w-18 max-w-52'>
       <div className='sticky top-0 left-0 h-screen flex flex-col border-r border-gray-700 w-20 md:w-full'>
-        <Link to='/' className='flex justify-center md:justify-start'>
-          <XSvg className='px-2 w-12 h-12 rounded-full fill-white hover:bg-stone-900' />
-        </Link>
+        <Link to='/' className='flex justify-center md:justify-start'></Link>
         <ul className='flex flex-col gap-3 mt-4'>
           <li className='flex justify-center md:justify-start'>
             <Link
