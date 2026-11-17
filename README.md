@@ -1,7 +1,7 @@
 # Social Media Application - MERN Stack
 
 
-- [Deployed on Render](https://socialmedia-ygl3.onrender.com/)
+- [Deployed on Render](https://socialmedia-1-5aj5.onrender.com/)
 
   ![Screenshot (57)](https://github.com/user-attachments/assets/fa0b3f96-66c0-49f6-906e-25015b0a1c47)
 
