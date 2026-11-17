@@ -1,5 +1,5 @@
 import daisyui from "daisyui";
-import daisyUIThemes from "daisyui/src/theming/themes";
+import daisyUIThemes from "daisyui/src/theming/themes.js";
 
 /** @type {import('tailwindcss').Config} */
 export default {
